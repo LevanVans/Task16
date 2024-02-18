@@ -21,24 +21,40 @@ class LinkedList:
             current.next = None
             self.tail = current
 
+
 linked_list = LinkedList(1)
 linked_list.append(2)
 linked_list.append(3)
-
+print(linked_list.head.value)
+print(linked_list.head.next.value)
+print(linked_list.head.next.next.value)
+linked_list.remove()
+print(linked_list.head.next.value)
 
 
 # Stack.py 
 
 
 class Stack:
-    def __init__(self):
-        self.stack = []
+  def __init__(self):
+    self.stack = []
 
-    def push(self, data):
-        self.stack.append(data)
+  def push(self, data):
+    self.stack.append(data)
 
-    def pop(self):
-        if not self.is_empty():
-            return self.stack.pop()
-        else:
-            print("Stack is Empty")
+  def pop(self):
+    if not self.is_empty():
+      return self.stack.pop()
+    else:
+      print("Stack is Empty")
+
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+stack.push(4)
+print(stack.stack)
+
+stack.pop()
+print(stack.stack)
